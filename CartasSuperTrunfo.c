@@ -2,8 +2,7 @@
 
 int main() 
 {
-    // ----------- DECLARAÇÃO DAS VARIÁVEIS PARA AS DUAS CARTAS -----------
-
+    //Entradas
     char estado1, codigo1[4], cidade1[30];
     unsigned long int populacao1;
     float area1, pib1;
@@ -14,7 +13,7 @@ int main()
     float area2, pib2;
     int pontos2;
 
-    // ----------- ENTRADA DA CARTA 1 -----------
+    //Carta 1
     printf("==== Cadastro Carta 1 ====\n");
 
     printf("Estado: ");
@@ -38,7 +37,7 @@ int main()
     printf("Pontos Turísticos: ");
     scanf("%d", &pontos1);
 
-    // ----------- ENTRADA DA CARTA 2 -----------
+    //Carta 2
     printf("\n==== Cadastro Carta 2 ====\n");
 
     printf("Estado: ");
@@ -62,7 +61,7 @@ int main()
     printf("Pontos Turísticos: ");
     scanf("%d", &pontos2);
 
-    // ----------- CÁLCULOS -----------
+    //Cálculos
     float dens1 = populacao1 / area1;
     float dens2 = populacao2 / area2;
 
@@ -72,8 +71,7 @@ int main()
     float super1 = (float)populacao1 + area1 + pib1 + pontos1 + ppc1 + (1.0f / dens1);
     float super2 = (float)populacao2 + area2 + pib2 + pontos2 + ppc2 + (1.0f / dens2);
 
-    // ----------- RESULTADOS DAS COMPARAÇÕES -----------
-
+    //Comparações
     printf("\n\n===== Comparação de Cartas =====\n");
 
     printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
